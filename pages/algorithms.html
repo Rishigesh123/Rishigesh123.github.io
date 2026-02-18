@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Algorithms - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <a href="ml-overview.html">Machine Learning</a>
+            <a href="algorithms.html" class="active">Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 50vh;">
+        <div class="hero-content">
+            <h1>Algorithm Details</h1>
+            <p>A deep dive into how machines learn.</p>
+        </div>
+        <div class="hero-image">
+            <!-- Placeholder for Algorithms Image -->
+            <img src="../images/nickype-ai-generated-8747423.jpg" alt="Algorithms Visualization"
+                onerror="this.style.display='none'">
+        </div>
+        <div class="section-title">LOGIC</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+
+        <!-- Supervised Learning Section -->
+        <h2
+            style="color: var(--primary-color); border-bottom: 2px solid var(--glass-border); padding-bottom: 10px; margin-bottom: 30px;">
+            Supervised Learning Algorithms</h2>
+
+        <div class="card" id="linear-regression">
+            <h3>Linear Regression</h3>
+            <p style="margin-bottom: 15px;"><strong>Type:</strong> Regression</p>
+            <p>A simple algorithm that models the relationship between a dependent variable and one or more independent
+                variables by fitting a linear equation to observed data.</p>
+            <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 5px;">
+                <strong>Real-time Use:</strong> Predicting house prices based on size, location, and age.
+            </div>
+        </div>
+
+        <div class="card" id="logistic-regression">
+            <h3>Logistic Regression</h3>
+            <p style="margin-bottom: 15px;"><strong>Type:</strong> Classification</p>
+            <p>Used to estimate discrete values (binary values like 0/1, yes/no, true/false) based on a given set of
+                independent variable(s).</p>
+            <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 5px;">
+                <strong>Real-time Use:</strong> Spam detection in emails (Spam or Not Spam).
+            </div>
+        </div>
+
+        <div class="card" id="decision-tree">
+            <h3>Decision Tree</h3>
+            <p style="margin-bottom: 15px;"><strong>Type:</strong> Classification & Regression</p>
+            <p>A tree-structured classifier, where internal nodes represent the features of a dataset, branches
+                represent the decision rules, and each leaf node represents the outcome.</p>
+            <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 5px;">
+                <strong>Real-time Use:</strong> Loan approval prediction (approve/deny based on credit score, income,
+                etc.).
+            </div>
+        </div>
+
+        <div class="card" id="svm">
+            <h3>Support Vector Machine (SVM)</h3>
+            <p style="margin-bottom: 15px;"><strong>Type:</strong> Classification</p>
+            <p>Finds a hyperplane in an N-dimensional space that distinctly classifies the data points.</p>
+            <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 5px;">
+                <strong>Real-time Use:</strong> Face detection, handwriting recognition.
+            </div>
+        </div>
+
+        <!-- Unsupervised Learning Section -->
+        <h2
+            style="color: var(--secondary-color); border-bottom: 2px solid var(--glass-border); padding-bottom: 10px; margin-bottom: 30px; margin-top: 50px;">
+            Unsupervised Learning Algorithms</h2>
+
+        <div class="card" id="kmeans">
+            <h3>K-Means Clustering</h3>
+            <p style="margin-bottom: 15px;"><strong>Type:</strong> Clustering</p>
+            <p>An iterative algorithm that partitions the dataset into K pre-defined distinct non-overlapping subgroups
+                (clusters) where each data point belongs to only one group.</p>
+            <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 5px;">
+                <strong>Real-time Use:</strong> Customer segmentation for marketing (grouping customers by purchasing
+                behavior).
+            </div>
+        </div>
+
+        <div class="card" id="pca">
+            <h3>Principal Component Analysis (PCA)</h3>
+            <p style="margin-bottom: 15px;"><strong>Type:</strong> Dimensionality Reduction</p>
+            <p>A statistical procedure that uses an orthogonal transformation to convert a set of observations of
+                possibly correlated variables into a set of values of linearly uncorrelated variables called principal
+                components.</p>
+            <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 5px;">
+                <strong>Real-time Use:</strong> Image compression, visualizing high-dimensional data.
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

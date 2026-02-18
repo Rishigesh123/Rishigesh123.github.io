@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <a href="ml-overview.html" class="active">Machine Learning</a>
+            <a href="algorithms.html">Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 60vh;">
+        <div class="hero-content">
+            <h1>Machine Learning</h1>
+            <p>The science of getting computers to act without being explicitly programmed.</p>
+        </div>
+        <div class="hero-image">
+            <img src="../images/ralph_germany-ai-generated-8370595.jpg" alt="ML Visualization"
+                onerror="this.style.display='none'">
+        </div>
+        <div class="section-title">LEARNING</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+        <div class="card">
+            <h2>What is Machine Learning?</h2>
+            <p>Machine Learning (ML) is a subset of AI that focuses on building systems that learn from data. Instead of
+                being programmed with specific rules, ML models use algorithms to find patterns in data and make
+                predictions.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+            <div class="card">
+                <h3>Supervised Learning</h3>
+                <p>The model is trained on labeled data. The algorithm learns from example input-output pairs.</p>
+                <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-color);">
+                    <li>Classification</li>
+                    <li>Regression</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <strong>Common Algorithms:</strong>
+                    <ul style="list-style-type: circle; margin-left: 40px; color: var(--text-muted);">
+                        <li>Linear Regression</li>
+                        <li>Logistic Regression</li>
+                        <li>Support Vector Machines (SVM)</li>
+                        <li>Decision Trees</li>
+                        <li>Random Forest</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Unsupervised Learning</h3>
+                <p>The model is trained on unlabeled data. The algorithm tries to find patterns and structure in the
+                    data on its own.</p>
+                <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-color);">
+                    <li>Clustering</li>
+                    <li>Association</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <strong>Common Algorithms:</strong>
+                    <ul style="list-style-type: circle; margin-left: 40px; color: var(--text-muted);">
+                        <li>K-Means Clustering</li>
+                        <li>Hierarchical Clustering</li>
+                        <li>Principal Component Analysis (PCA)</li>
+                        <li>Apriori Algorithm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="algorithms.html" class="btn">Explore Algorithms Details</a>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Means Clustering - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <div class="dropdown">
+                <a href="ml-overview.html">Machine Learning</a>
+                <div class="dropdown-content">
+                    <a href="deep-learning.html">Deep Learning</a>
+                </div>
+            </div>
+            <a href="algorithms.html">ML Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1>K-Means Clustering</h1>
+            <p>Mastering the art of grouping data points based on similarity.</p>
+        </div>
+        <div class="section-title">CLUSTERS</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="detail-grid">
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <section class="reveal">
+                    <h2>The Intuition</h2>
+                    <p>K-Means is an <span class="highlight">unsupervised learning algorithm</span> that groups data
+                        points into <strong>K</strong> clusters. It works by finding the central point (centroid) for
+                        each cluster and assigning every data point to its nearest centroid.</p>
+                    <p>Imagine sorting a box of mixed buttons by color. You pick a few "example" buttons (centroids) and
+                        put every other button in the pile it looks most like.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>How It Works</h2>
+                    <ol style="margin-left: 20px; line-height: 2;">
+                        <li><strong>Choose K:</strong> Decide how many clusters you want (e.g., K=3).</li>
+                        <li><strong>Initialize:</strong> Randomly place K centroids in the data space.</li>
+                        <li><strong>Assign:</strong> Each data point is linked to its closest centroid.</li>
+                        <li><strong>Update:</strong> Move each centroid to the mean (center) of its assigned points.
+                        </li>
+                        <li><strong>Repeat:</strong> Continue until centroids stop moving.</li>
+                    </ol>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Mathematical Objective</h2>
+                    <p>The algorithm aims to minimize the <strong>Within-Cluster Sum of Squares (WCSS)</strong>, also
+                        known as Inertia.</p>
+                    <div class="math-block">
+                        WCSS = Σ Σ || xᵢ - μⱼ ||²
+                    </div>
+                    <p>Where <em>μⱼ</em> is the centroid of cluster <em>j</em> and <em>xᵢ</em> is a data point in that
+                        cluster.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>The "Elbow" Method</h2>
+                    <p>How do we find the perfect <strong>K</strong>? We plot WCSS against different values of K. The
+                        point where the graph looks like an "elbow" is usually the optimal number of clusters.</p>
+                </section>
+            </div>
+
+            <!-- Side Info Panel -->
+            <div class="side-panel">
+                <div class="spec-card">
+                    <h4>ALGORITHM TYPE</h4>
+                    <p>Unsupervised (Clustering)</p>
+                </div>
+                <div class="spec-card">
+                    <h4>COMPLEXITY</h4>
+                    <p>O(n * k * i * d)</p>
+                    <small style="color: var(--text-muted);">n: nodes, k: clusters, i: iterations, d: features</small>
+                </div>
+                <div class="spec-card">
+                    <h4>STRENGTHS</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Simple & Fast</li>
+                        <li>Scalable</li>
+                        <li>Easy to Interpret</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h4>WEAKNESSES</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Sensitive to Outliers</li>
+                        <li>Needs K in advance</li>
+                        <li>Struggles with non-spherical shapes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="algorithms.html" class="btn">Return to Library</a>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

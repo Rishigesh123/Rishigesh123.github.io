@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apriori Algorithm - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <div class="dropdown">
+                <a href="ml-overview.html">Machine Learning</a>
+                <div class="dropdown-content">
+                    <a href="deep-learning.html">Deep Learning</a>
+                </div>
+            </div>
+            <a href="algorithms.html">ML Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1>Apriori Algorithm</h1>
+            <p>Uncovering hidden relationships in consumer behavior.</p>
+        </div>
+        <div class="section-title">ASSOCIATE</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="detail-grid">
+            <div class="main-content">
+                <section class="reveal">
+                    <h2>The Intuition</h2>
+                    <p>The Apriori Algorithm is used for <strong>Association Rule Mining</strong>. It identifies
+                        frequent itemsets in a database and generates rules to predict the occurrence of an item based
+                        on the presence of others.</p>
+                    <p>The classic example is "Market Basket Analysis": If a customer buys bread, they are very likely
+                        to buy butter as well. Apriori helps stores arrange products to boost sales.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>The Key Metrics</h2>
+                    <p>Apriori relies on three major indicators to evaluate the strength of a relationship:</p>
+                    <ul style="margin-left: 20px;">
+                        <li><span class="highlight">Support:</span> How popular the itemset is (e.g., how many
+                            transactions contain both Bread and Butter).</li>
+                        <li><span class="highlight">Confidence:</span> How likely B is purchased when A is purchased
+                            (e.g., likelihood of buying Butter given Bread is in the cart).</li>
+                        <li><span class="highlight">Lift:</span> How much more likely B is bought with A compared to if
+                            B was bought randomly.</li>
+                    </ul>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>How It Works</h2>
+                    <ol style="margin-left: 20px; line-height: 2;">
+                        <li><strong>Scan:</strong> Browse the transaction database to find frequent single items.</li>
+                        <li><strong>Prune:</strong> Discard items that appear less than a "Minimum Support" threshold.
+                        </li>
+                        <li><strong>Join:</strong> Combine the remaining items to form pairs (2-itemsets).</li>
+                        <li><strong>Repeat:</strong> Continue forming 3-itemsets, 4-itemsets, etc., until no more
+                            frequent itemsets can be found.</li>
+                        <li><strong>Rule Generation:</strong> Create rules (If A, then B) that meet "Minimum
+                            Confidence."</li>
+                    </ol>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>The Formula</h2>
+                    <div class="math-block">
+                        Confidence(A → B) = P(B | A) = Support(A, B) / Support(A)
+                    </div>
+                </section>
+            </div>
+
+            <div class="side-panel">
+                <div class="spec-card">
+                    <h4>ALGORITHM TYPE</h4>
+                    <p>Association Rule Learning</p>
+                </div>
+                <div class="spec-card">
+                    <h4>REAL WORLD USE</h4>
+                    <p>Amazon "Bought Together" sections, Netflix Recommendations, Hospital drug interactions</p>
+                </div>
+                <div class="spec-card">
+                    <h4>STRENGTHS</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Easy to understand</li>
+                        <li>No labels required</li>
+                        <li>Highly intuitive results</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h4>WEAKNESSES</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Computationally expensive</li>
+                        <li>Slow on large datasets</li>
+                        <li>Needs many DB scans</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="algorithms.html" class="btn">Return to Library</a>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

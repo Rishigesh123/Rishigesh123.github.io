@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBSCAN - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <div class="dropdown">
+                <a href="ml-overview.html">Machine Learning</a>
+                <div class="dropdown-content">
+                    <a href="deep-learning.html">Deep Learning</a>
+                </div>
+            </div>
+            <a href="algorithms.html">ML Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1>DBSCAN</h1>
+            <p>Density-Based Spatial Clustering of Applications with Noise.</p>
+        </div>
+        <div class="section-title">DENSITY</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="detail-grid">
+            <div class="main-content">
+                <section class="reveal">
+                    <h2>The Intuition</h2>
+                    <p>DBSCAN is a <span class="highlight">density-based clustering algorithm</span>. Unlike K-Means, it
+                        doesn't assume clusters are round. It groups together points that are close to each other in
+                        high-density areas.</p>
+                    <p>Imagine finding cities on a map. You look for areas where houses are packed tightly together. The
+                        empty space between cities is "noise."</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>The Core Parameters</h2>
+                    <ul style="margin-left: 20px;">
+                        <li><span class="highlight">Epsilon (eps):</span> The maximum distance between two points for
+                            them to be considered neighbors.</li>
+                        <li><span class="highlight">MinPoints:</span> The minimum number of neighbors a point must have
+                            to be considered a "Core Point."</li>
+                    </ul>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Point Classification</h2>
+                    <ol style="margin-left: 20px; line-height: 2;">
+                        <li><strong>Core Points:</strong> Points that have at least MinPoints within eps distance.</li>
+                        <li><strong>Border Points:</strong> Points within eps distance of a core point but don't have
+                            enough neighbors themselves.</li>
+                        <li><strong>Noise Points:</strong> Any point that isn't a core point or a border point. These
+                            are treated as outliers.</li>
+                    </ol>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>How It Works</h2>
+                    <p>The algorithm starts with an unvisited point. If it's a Core Point, it "expands" the cluster by
+                        adding all reachable neighbors. It continues until all points in the dense region are found.</p>
+                </section>
+            </div>
+
+            <div class="side-panel">
+                <div class="spec-card">
+                    <h4>ALGORITHM TYPE</h4>
+                    <p>Unsupervised (Density Clustering)</p>
+                </div>
+                <div class="spec-card">
+                    <h4>BEST USED FOR</h4>
+                    <p>Identifying outliers, non-spherical clusters, Geospatial data</p>
+                </div>
+                <div class="spec-card">
+                    <h4>STRENGTHS</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Finds clusters of any shape</li>
+                        <li>Robust to outliers (Noise)</li>
+                        <li>No need to specify K</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h4>WEAKNESSES</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Struggles with varying densities</li>
+                        <li>Hard to choose Epsilon</li>
+                        <li>Sensitive to distance metrics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="algorithms.html" class="btn">Return to Library</a>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

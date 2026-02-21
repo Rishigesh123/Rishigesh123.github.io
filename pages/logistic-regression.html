@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistic Regression - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <div class="dropdown">
+                <a href="ml-overview.html">Machine Learning</a>
+                <div class="dropdown-content">
+                    <a href="deep-learning.html">Deep Learning</a>
+                </div>
+            </div>
+            <a href="algorithms.html">ML Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1>Logistic Regression</h1>
+            <p>Decoding choices with the power of probability.</p>
+        </div>
+        <div class="section-title">CLASSIFY</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="detail-grid">
+            <div class="main-content">
+                <section class="reveal">
+                    <h2>The Intuition</h2>
+                    <p>Despite its name, Logistic Regression is used for <strong>Classification</strong>, not
+                        regression. It's a <span class="highlight">supervised learning algorithm</span> that predicts
+                        the probability of a binary outcome (Yes/No, Spam/Not Spam).</p>
+                    <p>Imagine a light switch. Instead of being either ON or OFF, logistic regression calculates the
+                        chance it's ON based on various sliders (features).</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>The Sigmoid Function</h2>
+                    <p>The "magic" happens using the Sigmoid (or Logistic) function, which squashes any numerical input
+                        into a value between <strong>0 and 1</strong>.</p>
+                    <div class="math-block">
+                        σ(z) = 1 / (1 + e⁻ᶻ)
+                    </div>
+                    <p>If the result is <strong>> 0.5</strong>, we classify it as 1. If it's <strong>
+                            < 0.5</strong>, it's 0.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Decision Boundary</h2>
+                    <p>The algorithm creates a "boundary" that separates classes. For example, in credit approval, it
+                        might draw a line where anyone with a credit score above 700 is "Approved."</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Log Loss</h2>
+                    <p>Instead of MSE, we use <strong>Log Loss</strong> (Cross-Entropy) to measure how close our
+                        predicted probability is to the true result.</p>
+                    <div class="math-block">
+                        Loss = -Σ [yᵢ log(pᵢ) + (1-yᵢ) log(1-pᵢ)]
+                    </div>
+                </section>
+            </div>
+
+            <div class="side-panel">
+                <div class="spec-card">
+                    <h4>ALGORITHM TYPE</h4>
+                    <p>Supervised (Classification)</p>
+                </div>
+                <div class="spec-card">
+                    <h4>BEST USED FOR</h4>
+                    <p>Spam detection, Medical Diagnosis (Sick/Healthy), Customer Churn</p>
+                </div>
+                <div class="spec-card">
+                    <h4>STRENGTHS</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Outputs Probabilities</li>
+                        <li>Very efficient</li>
+                        <li>Robust to slight noise</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h4>WEAKNESSES</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Assumes independence</li>
+                        <li>Struggles with non-linear data</li>
+                        <li>Prone to binary bias</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="algorithms.html" class="btn">Return to Library</a>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

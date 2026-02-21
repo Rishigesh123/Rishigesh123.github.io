@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Vector Machine - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <div class="dropdown">
+                <a href="ml-overview.html">Machine Learning</a>
+                <div class="dropdown-content">
+                    <a href="deep-learning.html">Deep Learning</a>
+                </div>
+            </div>
+            <a href="algorithms.html">ML Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1>Support Vector Machine (SVM)</h1>
+            <p>Drawing the ultimate boundary between data classes.</p>
+        </div>
+        <div class="section-title">BOUNDARY</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="detail-grid">
+            <div class="main-content">
+                <section class="reveal">
+                    <h2>The Intuition</h2>
+                    <p>SVM is a <span class="highlight">supervised machine learning algorithm</span> used primarily for
+                        classification. It works by finding the "hyperplane" that best separates data into different
+                        classes.</p>
+                    <p>Imagine a battlefield with two armies. SVM doesn't just draw a line between them; it finds the
+                        widest possible "No Man's Land" (margin) to ensure they are as far apart as possible.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>The Margin</h2>
+                    <p>The goal of SVM is to maximize the distance between the hyperplane and the nearest data points
+                        from either class. These critical points are called <strong>Support Vectors</strong>.</p>
+                    <div class="math-block">
+                        Maximize: 2 / ||w||
+                    </div>
+                    <p>By maximizing this margin, the algorithm becomes more robust and less prone to misclassifying
+                        new, unseen data.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>The Kernel Trick</h2>
+                    <p>What if the data can't be separated by a straight line? SVM uses a "Kernel" to project the data
+                        into a higher dimension where a linear separation is possible. Common kernels include
+                        <strong>RBF</strong> (Radial Basis Function) and <strong>Polynomial</strong>.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Hard vs. Soft Margin</h2>
+                    <p>A "Hard Margin" allows zero mistakes but can fail on noisy data. A "Soft Margin" uses a penalty
+                        parameter (C) to allow some misclassifications in exchange for a wider, more generalizable
+                        boundary.</p>
+                </section>
+            </div>
+
+            <div class="side-panel">
+                <div class="spec-card">
+                    <h4>ALGORITHM TYPE</h4>
+                    <p>Supervised (Classification)</p>
+                </div>
+                <div class="spec-card">
+                    <h4>STRENGTHS</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>High accuracy in high dimensions</li>
+                        <li>Effective with small datasets</li>
+                        <li>Versatile via Kernel trick</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h4>WEAKNESSES</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Slow on very large datasets</li>
+                        <li>Sensitive to feature scaling</li>
+                        <li>Hard to interpret (Black box)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="algorithms.html" class="btn">Return to Library</a>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

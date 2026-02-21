@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierarchical Clustering - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <div class="dropdown">
+                <a href="ml-overview.html">Machine Learning</a>
+                <div class="dropdown-content">
+                    <a href="deep-learning.html">Deep Learning</a>
+                </div>
+            </div>
+            <a href="algorithms.html">ML Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1>Hierarchical Clustering</h1>
+            <p>Building nested groups in a structured, tree-like hierarchy.</p>
+        </div>
+        <div class="section-title">HIERARCHY</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="detail-grid">
+            <div class="main-content">
+                <section class="reveal">
+                    <h2>The Intuition</h2>
+                    <p>Hierarchical Clustering is an <span class="highlight">unsupervised algorithm</span> that groups
+                        similar objects into clusters that are themselves grouped into larger clusters.</p>
+                    <p>Think of an ancestry tree. You start with individual family members, group them into nuclear
+                        families, then extended families, and so on until the entire tree is connected.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Types of Hierarchy</h2>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>Agglomerative (Bottom-Up):</strong> Start with each point as its own cluster and
+                            merge the closest ones repeatedly. This is the most common method.</li>
+                        <li><strong>Divisive (Top-Down):</strong> Start with all points in one giant cluster and split
+                            them until each point is solo.</li>
+                    </ul>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>The Dendrogram</h2>
+                    <p>The visual output of this algorithm is called a <strong>Dendrogram</strong>. It’s a tree-like
+                        diagram that shows exactly how and when each merge happened. You can "cut" the tree at any level
+                        to choose your number of clusters.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Linkage Criteria</h2>
+                    <p>How do we define "closeness"?</p>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>Single Linkage:</strong> Distance between the closest members of two clusters.</li>
+                        <li><strong>Complete Linkage:</strong> Distance between the farthest members.</li>
+                        <li><strong>Ward's Method:</strong> Minimizes the variance within each cluster (most robust).
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="side-panel">
+                <div class="spec-card">
+                    <h4>ALGORITHM TYPE</h4>
+                    <p>Unsupervised (Clustering)</p>
+                </div>
+                <div class="spec-card">
+                    <h4>KEY OUTPUT</h4>
+                    <p>Dendrogram (Visual Hierarchy)</p>
+                </div>
+                <div class="spec-card">
+                    <h4>STRENGTHS</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>No need to pre-define K</li>
+                        <li>Easy to visualize</li>
+                        <li>Reveals nested relationships</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h4>WEAKNESSES</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Slow on large datasets</li>
+                        <li>Merge decisions are permanent</li>
+                        <li>Sensitive to outliers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="algorithms.html" class="btn">Return to Library</a>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

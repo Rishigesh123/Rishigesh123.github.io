@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <div class="dropdown">
+                <a href="ml-overview.html">Machine Learning</a>
+                <div class="dropdown-content">
+                    <a href="deep-learning.html" class="active">Deep Learning</a>
+                </div>
+            </div>
+            <a href="algorithms.html">ML Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 60vh;">
+        <div class="hero-content">
+            <h1>Deep Learning</h1>
+            <p>Mimicking the human brain to solve the most complex problems.</p>
+        </div>
+        <div class="hero-image">
+            <img id="dl-hero-bg" src="../images/deel.jpg" alt="Deep Learning Visualization"
+                onerror="this.style.display='none'">
+        </div>
+        <div class="section-title">NEURONS</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="card">
+            <h2>What is Deep Learning?</h2>
+            <p>Deep Learning is a highly specialized subset of Machine Learning based on artificial neural networks. The
+                "deep" in deep learning refers to the multiple layers in the network. These algorithms inherently
+                attempt to draw similar conclusions as humans would by continually analyzing data with a given logical
+                structure.</p>
+            <p>While traditional Machine Learning algorithms are linear, Deep Learning algorithms are stacked in a
+                hierarchy of increasing complexity and abstraction. They power the most advanced AI applications we use
+                today, from voice assistants to self-driving cars.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+            <div class="card" style="line-height: 2;">
+                <h3>How It Links with Machine Learning</h3>
+                <p>Think of Artificial Intelligence (AI) as the largest circle. Inside it is Machine Learning (ML), and
+                    inside ML is Deep Learning (DL). Deep Learning is the evolution of Machine Learning.</p>
+                <p style="margin-top: 15px;">Both rely on algorithms to process data, learn from it, and make decisions
+                    without explicit
+                    programming. However, Deep Learning uses artificial neural networks inspired by the human brain to
+                    learn from vast amounts of unstructured data.</p>
+            </div>
+
+            <div class="card">
+                <h3>Difference from Machine Learning</h3>
+                <ul style="margin-left: 20px; line-height: 2;">
+                    <li><span class="highlight">Feature Extraction:</span> ML requires human intervention to extract
+                        features from data. DL learns to extract these features automatically.</li>
+                    <li><span class="highlight">Data Dependency:</span> DL requires a massive amount of data to perform
+                        better than traditional ML. If data is small, ML is usually preferred.</li>
+                    <li><span class="highlight">Hardware:</span> DL models require high-end machines with powerful GPUs,
+                        whereas ML can be run on CPU-based machines.</li>
+                    <li><span class="highlight">Execution Time:</span> DL takes a long time to train but is extremely
+                        fast during inference. ML trains quickly but can be slower at testing.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2
+            style="color: var(--primary-color); border-bottom: 2px solid var(--glass-border); padding-bottom: 10px; margin-bottom: 30px; margin-top: 60px;">
+            Deep Learning Algorithms
+        </h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div class="card">
+                <h3>Artificial Neural Networks (ANN)</h3>
+                <p>The foundation of all deep learning algorithms.</p>
+            </div>
+            <div class="card">
+                <h3>Convolutional Neural Networks (CNN)</h3>
+                <p>Primarily used for computer vision and image classification.</p>
+            </div>
+            <div class="card">
+                <h3>Recurrent Neural Networks (RNN)</h3>
+                <p>Excellent for sequential data like time-series or natural language.</p>
+            </div>
+            <div class="card">
+                <h3>Generative Adversarial Networks (GAN)</h3>
+                <p>Used to generate new data that resembles the training data.</p>
+            </div>
+            <div class="card">
+                <h3>Long Short-Term Memory Networks (LSTM)</h3>
+                <p>A type of RNN capable of learning long-term dependencies.</p>
+            </div>
+            <div class="card">
+                <h3>Transformers</h3>
+                <p>The architecture behind advanced language models like GPT and BERT.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

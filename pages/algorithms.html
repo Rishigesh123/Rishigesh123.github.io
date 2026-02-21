@@ -17,8 +17,13 @@
         <div class="nav-links">
             <a href="../index.html">Home</a>
             <a href="ai-intro.html">AI Intro</a>
-            <a href="ml-overview.html">Machine Learning</a>
-            <a href="algorithms.html" class="active">Algorithms</a>
+            <div class="dropdown">
+                <a href="ml-overview.html">Machine Learning</a>
+                <div class="dropdown-content">
+                    <a href="deep-learning.html">Deep Learning</a>
+                </div>
+            </div>
+            <a href="algorithms.html" class="active">ML Algorithms</a>
         </div>
     </nav>
 
@@ -43,7 +48,17 @@
             Supervised Learning Algorithms</h2>
 
         <div class="card" id="linear-regression">
-            <h3>Linear Regression</h3>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <h3>Linear Regression</h3>
+                <a href="linear-regression.html" class="explain-icon" title="View Detailed Explanation">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </a>
+            </div>
             <p style="margin-bottom: 15px;"><strong>Type:</strong> Regression</p>
             <p>A simple algorithm that models the relationship between a dependent variable and one or more independent
                 variables by fitting a linear equation to observed data.</p>
@@ -53,7 +68,17 @@
         </div>
 
         <div class="card" id="logistic-regression">
-            <h3>Logistic Regression</h3>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <h3>Logistic Regression</h3>
+                <a href="logistic-regression.html" class="explain-icon" title="View Detailed Explanation">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </a>
+            </div>
             <p style="margin-bottom: 15px;"><strong>Type:</strong> Classification</p>
             <p>Used to estimate discrete values (binary values like 0/1, yes/no, true/false) based on a given set of
                 independent variable(s).</p>
@@ -63,7 +88,17 @@
         </div>
 
         <div class="card" id="decision-tree">
-            <h3>Decision Tree</h3>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <h3>Decision Tree</h3>
+                <a href="decision-tree.html" class="explain-icon" title="View Detailed Explanation">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </a>
+            </div>
             <p style="margin-bottom: 15px;"><strong>Type:</strong> Classification & Regression</p>
             <p>A tree-structured classifier, where internal nodes represent the features of a dataset, branches
                 represent the decision rules, and each leaf node represents the outcome.</p>
@@ -74,11 +109,41 @@
         </div>
 
         <div class="card" id="svm">
-            <h3>Support Vector Machine (SVM)</h3>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <h3>Support Vector Machine (SVM)</h3>
+                <a href="svm.html" class="explain-icon" title="View Detailed Explanation">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </a>
+            </div>
             <p style="margin-bottom: 15px;"><strong>Type:</strong> Classification</p>
             <p>Finds a hyperplane in an N-dimensional space that distinctly classifies the data points.</p>
             <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 5px;">
                 <strong>Real-time Use:</strong> Face detection, handwriting recognition.
+            </div>
+        </div>
+
+        <div class="card" id="random-forest">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <h3>Random Forest</h3>
+                <a href="random-forest.html" class="explain-icon" title="View Detailed Explanation">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </a>
+            </div>
+            <p style="margin-bottom: 15px;"><strong>Type:</strong> Ensemble (Classification & Regression)</p>
+            <p>An ensemble learning method that constructs a multitude of decision trees and merges them together to get
+                a more accurate and stable prediction.</p>
+            <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 5px;">
+                <strong>Real-time Use:</strong> Stock market prediction, credit card fraud detection.
             </div>
         </div>
 
@@ -88,7 +153,17 @@
             Unsupervised Learning Algorithms</h2>
 
         <div class="card" id="kmeans">
-            <h3>K-Means Clustering</h3>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <h3>K-Means Clustering</h3>
+                <a href="kmeans.html" class="explain-icon" title="View Detailed Explanation">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </a>
+            </div>
             <p style="margin-bottom: 15px;"><strong>Type:</strong> Clustering</p>
             <p>An iterative algorithm that partitions the dataset into K pre-defined distinct non-overlapping subgroups
                 (clusters) where each data point belongs to only one group.</p>
@@ -99,13 +174,82 @@
         </div>
 
         <div class="card" id="pca">
-            <h3>Principal Component Analysis (PCA)</h3>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <h3>Principal Component Analysis (PCA)</h3>
+                <a href="pca.html" class="explain-icon" title="View Detailed Explanation">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </a>
+            </div>
             <p style="margin-bottom: 15px;"><strong>Type:</strong> Dimensionality Reduction</p>
             <p>A statistical procedure that uses an orthogonal transformation to convert a set of observations of
                 possibly correlated variables into a set of values of linearly uncorrelated variables called principal
                 components.</p>
             <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 5px;">
                 <strong>Real-time Use:</strong> Image compression, visualizing high-dimensional data.
+            </div>
+        </div>
+
+        <div class="card" id="hierarchical-clustering">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <h3>Hierarchical Clustering</h3>
+                <a href="hierarchical-clustering.html" class="explain-icon" title="View Detailed Explanation">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </a>
+            </div>
+            <p style="margin-bottom: 15px;"><strong>Type:</strong> Clustering</p>
+            <p>A method of cluster analysis which seeks to build a hierarchy of clusters, often represented in a
+                tree-like diagram called a dendrogram.</p>
+            <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 5px;">
+                <strong>Real-time Use:</strong> Evolutionary biology (showing relationships between different species).
+            </div>
+        </div>
+
+        <div class="card" id="dbscan">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <h3>DBSCAN</h3>
+                <a href="dbscan.html" class="explain-icon" title="View Detailed Explanation">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </a>
+            </div>
+            <p style="margin-bottom: 15px;"><strong>Type:</strong> Density-Based Clustering</p>
+            <p>Groups together points that are close to each other based on a distance measurement and a minimum number
+                of points, identifying outliers as noise.</p>
+            <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 5px;">
+                <strong>Real-time Use:</strong> Identifying anomalies in satellite imagery or cleaning noisy data.
+            </div>
+        </div>
+
+        <div class="card" id="apriori">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <h3>Apriori Algorithm</h3>
+                <a href="apriori.html" class="explain-icon" title="View Detailed Explanation">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </a>
+            </div>
+            <p style="margin-bottom: 15px;"><strong>Type:</strong> Association Rule Learning</p>
+            <p>An algorithm used to find frequent itemsets in a dataset and derive association rules between them.</p>
+            <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 5px;">
+                <strong>Real-time Use:</strong> Market basket analysis (e.g., "People who buy milk also buy bread").
             </div>
         </div>
 

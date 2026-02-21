@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCA - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <div class="dropdown">
+                <a href="ml-overview.html">Machine Learning</a>
+                <div class="dropdown-content">
+                    <a href="deep-learning.html">Deep Learning</a>
+                </div>
+            </div>
+            <a href="algorithms.html">ML Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1>Principal Component Analysis (PCA)</h1>
+            <p>Simplifying complexity by reducing dimensions without losing essence.</p>
+        </div>
+        <div class="section-title">REDUCE</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="detail-grid">
+            <div class="main-content">
+                <section class="reveal">
+                    <h2>The Intuition</h2>
+                    <p>PCA is an <span class="highlight">unsupervised algorithm</span> used for <strong>dimensionality
+                            reduction</strong>. It transforms a large set of variables into a smaller one that still
+                        contains most of the information in the original set.</p>
+                    <p>Imagine compressing a 3D shadow onto a 2D wall while still being able to recognize the object.
+                        PCA finds the best angle to capture that shadow.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Core Concepts</h2>
+                    <ul>
+                        <li><span class="highlight">Variance:</span> Measures how spread out data is. PCA tries to
+                            preserve maximum variance.</li>
+                        <li><span class="highlight">Covariance Matrix:</span> A table showing how variables relate to
+                            each other.</li>
+                        <li><span class="highlight">Eigenvectors & Eigenvalues:</span> These define the directions
+                            (Principal Components) and their relative importance.</li>
+                    </ul>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>How It Works</h2>
+                    <ol style="margin-left: 20px; line-height: 2;">
+                        <li><strong>Standardize:</strong> Scale the data so all features have the same range.</li>
+                        <li><strong>Variance Analysis:</strong> Compute the Covariance Matrix.</li>
+                        <li><strong>Extract Components:</strong> Find the Eigenvectors (directions) and Eigenvalues
+                            (magnitude).</li>
+                        <li><strong>Sort & Select:</strong> Pick the top components that explain the most variance.</li>
+                        <li><strong>Transform:</strong> Project the data onto the new, smaller feature space.</li>
+                    </ol>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Mathematical Foundation</h2>
+                    <p>The first Principal Component is the unit vector <strong>u₁</strong> that maximizes the variance
+                        of the projected data:</p>
+                    <div class="math-block">
+                        Maximize: uᵀ Σ u
+                    </div>
+                    <p>Where <em>Σ</em> is the Covariance Matrix of the dataset.</p>
+                </section>
+            </div>
+
+            <div class="side-panel">
+                <div class="spec-card">
+                    <h4>ALGORITHM TYPE</h4>
+                    <p>Dimensionality Reduction</p>
+                </div>
+                <div class="spec-card">
+                    <h4>BEST USED FOR</h4>
+                    <p>Image Compression, Data Visualization, Noise Filtering</p>
+                </div>
+                <div class="spec-card">
+                    <h4>STRENGTHS</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Reduces Overfitting</li>
+                        <li>Speeds up Learning</li>
+                        <li>Removes Correlated features</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h4>WEAKNESSES</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Loss of Interpretability</li>
+                        <li>Needs Standard Scaling</li>
+                        <li>Captures only linear relations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="algorithms.html" class="btn">Return to Library</a>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

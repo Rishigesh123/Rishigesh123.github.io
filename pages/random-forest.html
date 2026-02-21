@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Forest - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <div class="dropdown">
+                <a href="ml-overview.html">Machine Learning</a>
+                <div class="dropdown-content">
+                    <a href="deep-learning.html">Deep Learning</a>
+                </div>
+            </div>
+            <a href="algorithms.html">ML Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1>Random Forest</h1>
+            <p>Combining multiple trees for unshakeable predictive power.</p>
+        </div>
+        <div class="section-title">FOREST</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="detail-grid">
+            <div class="main-content">
+                <section class="reveal">
+                    <h2>The Intuition</h2>
+                    <p>Random Forest is an <span class="highlight">ensemble learning method</span> that builds multiple
+                        decision trees and merges them together to get a more accurate and stable prediction.</p>
+                    <p>Instead of relying on one "expert" (one tree), you ask a whole crowd of experts and take the
+                        majority vote. This "Wisdom of the Crowd" prevents any single expert's bias from ruining the
+                        result.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Bagging (Bootstrap Aggregation)</h2>
+                    <p>The secret sauce of Random Forest is <strong>Bagging</strong>. It trains each tree on a different
+                        random subset of the data and a random subset of features.</p>
+                    <div class="math-block">
+                        Final Prediction = Mode(Tree₁, Tree₂, ..., Treeₙ)
+                    </div>
+                    <p>This ensures that the trees are diverse and uncorrelated, which significantly reduces
+                        overfitting.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Out-of-Bag (OOB) Error</h2>
+                    <p>Since each tree is trained on a subset, we can test it on the data it *didn't* see. This gives us
+                        a built-in validation metric without needing a separate test set.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Feature Importance</h2>
+                    <p>Random Forest can tell you exactly which features (like "pincode" or "income") were most
+                        influential in making predictions, making it a great tool for data analysis.</p>
+                </section>
+            </div>
+
+            <div class="side-panel">
+                <div class="spec-card">
+                    <h4>ALGORITHM TYPE</h4>
+                    <p>Ensemble (Supervised)</p>
+                </div>
+                <div class="spec-card">
+                    <h4>STRENGTHS</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Extremely Accurate</li>
+                        <li>Resistant to Overfitting</li>
+                        <li>Handles missing values well</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h4>WEAKNESSES</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Slow to train (many trees)</li>
+                        <li>Requires more memory</li>
+                        <li>Becomes a "Black Box"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="algorithms.html" class="btn">Return to Library</a>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Tree - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <div class="dropdown">
+                <a href="ml-overview.html">Machine Learning</a>
+                <div class="dropdown-content">
+                    <a href="deep-learning.html">Deep Learning</a>
+                </div>
+            </div>
+            <a href="algorithms.html">ML Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1>Decision Tree</h1>
+            <p>Mapping complex decisions into simple, logical branches.</p>
+        </div>
+        <div class="section-title">LOGIC</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="detail-grid">
+            <div class="main-content">
+                <section class="reveal">
+                    <h2>The Intuition</h2>
+                    <p>A Decision Tree is a <span class="highlight">supervised learning algorithm</span> that works like
+                        a flow chart. It recursively splits data into subsets based on the most important features until
+                        it reaches a final prediction.</p>
+                    <p>Think of the game "20 Questions." The algorithm asks the best possible question at each step to
+                        narrow down the answer as quickly as possible.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Anatomy of a Tree</h2>
+                    <ul style="margin-left: 20px;">
+                        <li><span class="highlight">Root Node:</span> The very first question that represents the entire
+                            dataset.</li>
+                        <li><span class="highlight">Internal Nodes:</span> Questions about specific features (e.g., "Is
+                            wind speed > 20mph?").</li>
+                        <li><span class="highlight">Branches:</span> The outcome of a question (e.g., Yes / No).</li>
+                        <li><span class="highlight">Leaf Nodes:</span> The final classification or numerical prediction.
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>How It Splites</h2>
+                    <p>The algorithm uses mathematical criteria to decide which feature to split on:</p>
+                    <div class="math-block">
+                        Gini Impurity = 1 - Σ (pᵢ)²
+                    </div>
+                    <p>Or <strong>Entropy</strong>. The goal is to maximize "Information Gain" at every split—making the
+                        resulting groups as "pure" as possible.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Overfitting</h2>
+                    <p>A major challenge is that trees can become too complex, memorizing the training data instead of
+                        learning patterns. We solve this by "Pruning"—cutting off branches that don't add significant
+                        predictive power.</p>
+                </section>
+            </div>
+
+            <div class="side-panel">
+                <div class="spec-card">
+                    <h4>ALGORITHM TYPE</h4>
+                    <p>Supervised (Classification & Regression)</p>
+                </div>
+                <div class="spec-card">
+                    <h4>STRENGTHS</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Visual & Intuitive</li>
+                        <li>Handles non-linear data</li>
+                        <li>No data scaling needed</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h4>WEAKNESSES</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Prone to Overfitting</li>
+                        <li>Unstable (Small data shifts = big tree shifts)</li>
+                        <li>Biased if classes are unbalanced</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="algorithms.html" class="btn">Return to Library</a>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

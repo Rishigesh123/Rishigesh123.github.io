@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Regression - Rishiii's Story</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rishiii's Story</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="ai-intro.html">AI Intro</a>
+            <div class="dropdown">
+                <a href="ml-overview.html">Machine Learning</a>
+                <div class="dropdown-content">
+                    <a href="deep-learning.html">Deep Learning</a>
+                </div>
+            </div>
+            <a href="algorithms.html">ML Algorithms</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1>Linear Regression</h1>
+            <p>Predicting values with surgical precision.</p>
+        </div>
+        <div class="section-title">REGRESS</div>
+    </header>
+
+    <div class="container" style="padding: 50px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="detail-grid">
+            <div class="main-content">
+                <section class="reveal">
+                    <h2>The Intuition</h2>
+                    <p>Linear Regression is the "Hello World" of Machine Learning. It's a <span
+                            class="highlight">supervised learning algorithm</span> used to predict a continuous
+                        numerical value based on one or more input features.</p>
+                    <p>Imagine you have a scatter plot of house sizes vs. prices. Linear regression finds the single
+                        best straight line that passes through those points with the minimum total error.</p>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>The Hypothesis</h2>
+                    <p>The core of the algorithm is the straight-line equation:</p>
+                    <div class="math-block">
+                        Y = β₀ + β₁X + ε
+                    </div>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>Y:</strong> The target value we want to predict (e.g., Price).</li>
+                        <li><strong>X:</strong> The input feature (e.g., Size).</li>
+                        <li><strong>β₀ (Intercept):</strong> Where the line crosses the Y-axis.</li>
+                        <li><strong>β₁ (Slope):</strong> The weight or importance of the input feature.</li>
+                    </ul>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>How It Works</h2>
+                    <ol style="margin-left: 20px; line-height: 2;">
+                        <li><strong>Loss Calculation:</strong> We measure the distance between the actual data points
+                            and our line (the "errors").</li>
+                        <li><strong>Minimize Error:</strong> Ideally, we use <strong>Mean Squared Error (MSE)</strong>
+                            to penalize large errors more heavily.</li>
+                        <li><strong>Optimization:</strong> We use an optimizer (like Gradient Descent) to nudge β₀ and
+                            β₁ until the error is as small as possible.</li>
+                    </ol>
+                </section>
+
+                <section class="reveal" style="margin-top: 40px;">
+                    <h2>Cost Function (MSE)</h2>
+                    <div class="math-block">
+                        J(θ) = (1/2n) * Σ (Predictedᵢ - Actualᵢ)²
+                    </div>
+                </section>
+            </div>
+
+            <div class="side-panel">
+                <div class="spec-card">
+                    <h4>ALGORITHM TYPE</h4>
+                    <p>Supervised (Regression)</p>
+                </div>
+                <div class="spec-card">
+                    <h4>TIME COMPLEXITY</h4>
+                    <p>O(n * p² + p³)</p>
+                    <small style="color: var(--text-muted);">n: samples, p: features</small>
+                </div>
+                <div class="spec-card">
+                    <h4>STRENGTHS</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Mathematically robust</li>
+                        <li>Extremely fast</li>
+                        <li>High interpretability</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h4>WEAKNESSES</h4>
+                    <ul style="font-size: 0.9rem; margin-left: 15px;">
+                        <li>Assumes linearity</li>
+                        <li>Sensitive to outliers</li>
+                        <li>Prone to underfitting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="algorithms.html" class="btn">Return to Library</a>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
